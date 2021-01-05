@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --grid: 16;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.heading {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin: auto 0 auto auto;
+}
+
+.options {
+  background-color: #155f64;
+  height: 80%;
+  width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto 0 auto 0;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.options div {
+  padding: 1rem 0;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+
+.options div:hover {
+  background-color: #115155;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  margin: auto auto auto 1rem;
+  -ms-grid-columns: (1fr)[var];
+      grid-template-columns: repeat(var(--grid), 1fr);
+  -ms-grid-rows: (1fr)[var];
+      grid-template-rows: repeat(var(--grid), 1fr);
+  width: 500px;
+  height: 500px;
+}
+
+.grid-container .grid {
+  border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .options {
+    background-color: #155f64;
+    width: 80%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto auto auto auto;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .options div {
+    font-size: 13px;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    color: white;
+  }
+  .options div:first-child:hover {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+  .options div:last-child:hover {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .grid-container {
+    margin: auto;
+    width: 250px;
+    height: 250px;
+  }
+  .heading {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
